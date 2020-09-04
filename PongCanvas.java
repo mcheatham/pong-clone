@@ -1,4 +1,3 @@
-import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -6,10 +5,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import javax.swing.JPanel;
 import javax.swing.Timer;
 
 
-public class PongCanvas extends Canvas {
+public class PongCanvas extends JPanel {
 
 	private int ballX;
 	private int ballY;
@@ -34,6 +34,10 @@ public class PongCanvas extends Canvas {
 		this.gameInterface= gameInterface;
 
 		setBackground(Color.black);
+		setDoubleBuffered(true);
+
+		setFocusable(true);
+		requestFocus();
 
 		new Timer(ballSpeed, e -> {
 				ballX += xDir * delta;
@@ -121,7 +125,8 @@ public class PongCanvas extends Canvas {
 	}
 
 	@Override
-	public void paint(Graphics g) {
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 		g.setColor(Color.green);
 		g.fillOval(ballX, ballY, ballSize, ballSize);
 		g.fillRect(0, leftY, 10, paddleHeight);
