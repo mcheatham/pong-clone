@@ -45,6 +45,11 @@ class Pong extends JFrame {
 
 		if (leftScore == 3) {
 			JOptionPane.showMessageDialog(this, "Player 1 wins!");
+
+			// Once left score reaches 3 (winning amount) scores are reset utilizing method call.
+			// See below for method
+			leftReset();
+			rightReset();
 		}
 	}
 
@@ -56,7 +61,33 @@ class Pong extends JFrame {
 
 		if (rightScore == 3) {
 			JOptionPane.showMessageDialog(this, "Player 2 wins!");
+
+			/*
+			* Once right score reaches 3 (winning amount) scores are reset utilizing method call.
+			* See below for method
+			* These methods are called after the winning message is displayed so players can
+			* continue to see final score until new game is started
+			 */
+			leftReset();
+			rightReset();
 		}
+	}
+
+
+	/*
+	* Since both rightPlayerScored and leftPlayerScored reach winning numbers separately
+	* methods were created for resetting each side in order to minimize the copying of code.
+	* Each method initializes the score to 0 and resets the label with newly initialized
+	* score.
+	 */
+	public void leftReset() {
+		leftScore = 0;
+		leftLabel.setText("Player 1: " + leftScore);
+	}
+
+	public void rightReset() {
+		rightScore = 0;
+		rightLabel.setText("Player 1: " + rightScore);
 	}
 
 
