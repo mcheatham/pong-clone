@@ -3,6 +3,11 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.Font;
 
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 class Pong extends JFrame {
 
 	private int leftScore = 0;
@@ -43,6 +48,20 @@ class Pong extends JFrame {
 		leftLabel.setText("Player 1: " + leftScore);
 		repaint();
 
+		try
+		{
+			String soundName = "resources/pingpongsound.wav";    
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName));
+			Clip clip = AudioSystem.getClip();
+			clip.open(audioInputStream);
+			clip.start();
+		}
+		// TODO: change from Exception to catch heirarchy
+		catch(Exception e)
+		{
+			// TODO: handle exception
+		}
+
 		if (leftScore == 3) {
 			JOptionPane.showMessageDialog(this, "Player 1 wins!");
 
@@ -58,6 +77,20 @@ class Pong extends JFrame {
 		rightScore++;
 		rightLabel.setText("Player 2: " + rightScore);
 		repaint();
+
+		try
+		{
+			String soundName = "resources/pingpongsound.wav";    
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName));
+			Clip clip = AudioSystem.getClip();
+			clip.open(audioInputStream);
+			clip.start();
+		}
+		// TODO: change from Exception to catch heirarchy
+		catch(Exception e)
+		{
+			// TODO: handle exception
+		}
 
 		if (rightScore == 3) {
 			JOptionPane.showMessageDialog(this, "Player 2 wins!");
