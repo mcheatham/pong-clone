@@ -25,6 +25,8 @@ This is a collaborative learning-focused project for beginning CS students at Wr
  * Pull the lastest version of master from the upstream repository: `git pull upstream master`
  
  * Push the latest version of master to your local repo with: `git push origin master`
+ 
+ * Create a new branch to work on your issue in: `git checkout -b <branch_name>`
 
 3. Play around with the code and fix/implement the issue you picked. NOTE: We're writing Pong here. This is a *very* low-stakes development project. Don't worry if you don't understand all aspects of the code -- just play around with it and see what you can do.
 
