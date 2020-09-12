@@ -20,7 +20,7 @@ This is a collaborative learning-focused project for beginning CS students at Wr
 
 2. Make sure you are working on an up-to-date version of the project. To do this:
 
- * Checkout master in your local repository: `git checkout master`
+ * Check out master in your local repository: `git checkout master`
  
  * Pull the lastest version of master from the upstream repository: `git pull upstream master`
  
