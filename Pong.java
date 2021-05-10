@@ -13,12 +13,13 @@ class Pong extends JFrame {
 	private int rightScore = 0;
 	private JLabel leftLabel;
 	private JLabel rightLabel;
+	private int endScore = 3;
 
-
-	public Pong() {
+	public Pong(int endScore) {
 
 		super("Pong");
-	
+
+		this.endScore = endScore;
 		this.setLayout(new BorderLayout());
 
 		PongCanvas canvas = new PongCanvas(this);
@@ -39,6 +40,8 @@ class Pong extends JFrame {
 
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.setSize(500, 300);
+
+
 	}
 
 
@@ -113,7 +116,7 @@ class Pong extends JFrame {
 
 
 	public static void main(String[] args) {
-		new Pong().setVisible(true);
+		new Pong(Integer.parseInt(args[0])).setVisible(true);
 	}
 
 }

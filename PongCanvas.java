@@ -127,7 +127,7 @@ public class PongCanvas extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.setColor(Color.green);
+		g.setColor(Color.white);
 		g.fillOval(ballX, ballY, ballSize, ballSize);
 		g.fillRect(0, leftY, 10, paddleHeight);
 		g.fillRect((int) getSize().getWidth()-10, rightY, 10, paddleHeight);
