@@ -10,7 +10,7 @@ This is a collaborative learning-focused project for beginning CS students at Wr
 
 3. Fork this project (the fork button is in the upper right corner of this page). This creates a copy of the repository within your own GitHub account for you to work on independently, so that multiple developers can be working on different parts of the application at the same time.
 
-4. Clone your fork to your local system by opening up a terminal and using this command: `git clone <REPOSITORY_URL>`  You can find the repository URL by clicking on the green "Code" button. Create a connection between your local repository and the main one in my GitHub account by typing the following from the terminal:
+4. Clone your fork to your local system by opening up a terminal and using this command: `git clone <REPOSITORY_URL>`  You can find the repository URL by clicking on the green "Code" button. Create a connection between your local repository and the main one in my GitHub account by typing the line below from the terminal. Note that the REPOSITORY_URL below is the one of the <b>original</b> repo, whereas the one from the clone command is the URL of your <b>fork</b>.
 
  * `git remote add upstream <REPOSITORY_URL>`
  
