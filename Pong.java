@@ -47,7 +47,7 @@ class Pong extends JFrame {
 
 	public void playSound() {
 		try {
-			String soundName = "bells.wav";    
+			String soundName = "bounce.wav";    
 			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName));
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioInputStream);
